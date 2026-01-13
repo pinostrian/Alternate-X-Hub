@@ -1,9 +1,10 @@
 # Alternate-X-Hub
-Want a Stylish Clean Hub for Executors? Try our New brand made Alternate X-Hub Fast and Stylish made with care
+## Introduction
+Alternate X is a mordern Ui
+for stylish clean
 
-boot the library! 
-
-'''local AlternateX = loadstring(game:HttpGet("
+# Getting Started
+```local AlternateX = loadstring(game:HttpGet("
 https://raw.githubusercontent.com/pinostrian/AlternateX/main/AlternateX.lua"
 ))()
 
