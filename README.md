@@ -11,10 +11,10 @@ It focuses on simplicity, performance, and flexibility for script developers.
 
 Use the loadstring below to initialize Alternate X Hub.
 
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/pinostrian/Alternate-X-Hub/main/AlternateX.lua"))()
+```local AlternateX = loadstring(game:HttpGet(
+"https://raw.githubusercontent.com/pinostrian/Alternate-X-Hub/main/AlternateX.lua"
+))()
 ```
-
 ---
 
 ## Creating a Window
