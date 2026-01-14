@@ -16,15 +16,26 @@ local AX = loadstring(game:HttpGet("https://raw.githubusercontent.com/yourname/A
 ```
 ---
 
-## Creating a Window
+## Creating a Window & Key System
 
 ```lua
-local Window = AlternateX:CreateWindow({
-    Name = "Alternate X Hub",
-    LoadingTitle = "Alternate X",
-    LoadingSubtitle = "Initializing",
-    Theme = "Dark",
-    KeySystem = true
+local Window = AX:CreateWindow({
+    Name = "Alternate X",
+    Loading = {
+        Title = "Alternate X Premium",
+        Subtitle = "Clean • Smooth • Powerful",
+        Time = 2
+    },
+    KeySystem = {
+        Enabled = true,
+        Key = "AX-1234"
+    },
+    FloatingIcon = {
+        Enabled = true,
+        Image = "rbxassetid://124558441880674",
+        Size = 52,
+        Position = UDim2.fromScale(0.05, 0.5)
+    }
 })
 ```
 
@@ -43,8 +54,7 @@ local Window = AlternateX:CreateWindow({
 ## Creating Tabs
 
 ```lua
-local MainTab = Window:CreateTab("Main")
-local SettingsTab = Window:CreateTab("Settings")
+local Main = Window:CreateTab("Mai
 ```
 
 ---
@@ -52,12 +62,9 @@ local SettingsTab = Window:CreateTab("Settings")
 ## Adding Buttons
 
 ```lua
-MainTab:AddButton({
-    Name = "Example Button",
-    Callback = function()
-        print("Button clicked")
-    end
-})
+Main:AddButton("Test Button", function()
+    print("Clicked")
+end)
 ```
 
 ---
@@ -65,44 +72,15 @@ MainTab:AddButton({
 ## Adding Toggles
 
 ```lua
-MainTab:AddToggle({
-    Name = "Example Toggle",
-    Default = false,
-    Callback = function(Value)
-        print(Value)
-    end
-})
+Main:AddToggle("God Mode", false, function(v)
+    print("Toggle:", v)
+end)
 ```
 
 ---
-
-## Adding Sliders
-
-```lua
-MainTab:AddSlider({
-    Name = "Example Slider",
-    Min = 0,
-    Max = 100,
-    Default = 50,
-    Callback = function(Value)
-        print(Value)
-    end
-})
-```
-
 ---
 
-## Key System
 
-Alternate X Hub includes a built-in key system for access control.
-
-```lua
-KeySettings = {
-    Title = "Alternate X Key System",
-    Description = "Enter your key to continue",
-    GetKeyURL = "https://discord.gg/yourserver"
-}
-```
 
 ---
 
